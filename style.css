@@ -1,0 +1,357 @@
+/*CSS Reset / Normalize*/
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root{
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --cor-de-fundo: #F5F5F5;
+   --cor-de-link: #000;
+}
+
+body {
+    /*box-sizing: border-box;*/
+    background-color: var(--cor-de-fundo) ;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/*Sección Menu*/
+
+section.menu{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+}
+
+.menu__header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu__list {
+    display: flex;
+    gap: 25px;
+}
+
+/*Sección Title*/
+
+.title__div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 40px 10%;
+}
+
+.title__profile {
+    width: 368px;
+    height: 368px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.title__bio {
+    font-family: "Raleway", sans-serif;
+    font-size: 52px;
+}
+
+.title__network {
+    display: flex;
+    gap: 25px;
+    padding: 0%;
+}
+
+/*Sección About*/
+
+section.about{
+    background-color: #EAF2FD;
+    padding: 25px 10%;
+}
+
+.about__container {
+    padding-right: 32%;
+}
+
+.about__container img {
+    height: 52px;
+    width: 140px;
+}
+
+/*Sección Skills*/
+
+.skills {
+    padding: 0 10%;
+    margin-top: 32px;
+}
+
+.skills__title {
+    display: flex;
+    justify-content: center;
+}
+
+.skills__box {
+    display: flex;
+    align-items: flex-end;
+    background-color: #FFFFFF;
+    height: 174px;
+    width: 176px;
+}
+
+.skills__line {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Sección Hobbies*/
+
+section.hobbies{
+    padding: 40px 10%;
+}
+
+.hobbies__title {
+    display: flex;
+    justify-content: center;
+}
+
+.hobbies__line {
+    display: flex;
+    justify-content: space-around;
+}
+
+.hobbies__box {
+    display: flex;
+    align-items: flex-end;
+    height: 174px;
+    width: 176px;
+    background-color: #FFFFFF;
+}
+
+/* Experiencia Académica*/
+
+section.academic{
+    background-color: #EAF2FD;
+    padding: 82px 10%;
+}
+
+.academic__title {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.academic__courses {
+    display: flex;
+    justify-content:space-between ;
+}
+
+.academic__courses__list {
+    padding: 0%;
+}
+
+.academic__courses__box {
+    height: 347px;
+    width: 368px;
+}
+
+.academic__courses__item__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 286px;
+    width: 368px;
+    background-color: #FFFFFF;
+    margin: auto;
+}
+
+.academic__courses__item__img img {
+    max-width: 70%; /* Asegura que la imagen se ajuste al contenedor */
+    max-height: 70%; /* Asegura que la imagen se ajuste al contenedor */
+    object-fit: contain;
+}
+
+/* experiencia*/
+
+section.experience{
+    padding: 20px 10%;
+}
+
+.experience__section__title {
+    display: flex;
+    justify-content: center;
+}
+
+.experience__box {
+    display: flex;
+}
+
+.experience__box h2 {
+    font-size: 26px;
+    margin: 5px;
+}
+
+.experience__info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 15px;
+}
+
+.experience__text {
+    margin: 5px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.experience__description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.experiencia__botao--repo {
+    height: 51px;
+    width: 122px;
+    border: 2px solid #2A7AE4;
+    color: #2A7AE4;
+}
+
+.experience__botao--demo {
+    height: 51px;
+    width: 122px;
+    background-color: #2A7AE4;
+    border: 2px solid #2A7AE4;
+    color: #FFFFFF;
+}
+
+/*Contacto*/
+
+section.formcontato{
+    background-color: #EAF2FD;
+    padding: 82px 10%;
+}
+
+.formcontato__contacto {
+    display: flex;
+    gap: 15px;
+}
+
+.formcontato__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formcontato__text h2 {
+    margin: 0%;
+}
+
+.formcontato__form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.formcontato__input {
+    height: 56px;
+    border-style: hidden;
+}
+
+.formcontato__textarea {
+    border-style: hidden;
+}
+
+.formcontato__botao {
+    height: 51px;
+    width: 144px;
+    background-color: #2A7AE4;
+    border: 2px solid #2A7AE4;
+    color: #FFFFFF;
+}
+
+/*footeer*/
+
+section.footer{
+    background-color: #FFFFFF;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__rodape p {
+    display: flex;
+    justify-content: center;
+}
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+
+/*Tablet*/
+@media (min-width: 768px) {
+
+/* Menú */
+
+/*title*/
+
+/*Skills*/
+
+/*Hobbies*/
+
+/*Formación Académica*/
+
+/*Experiencia Profesional*/
+
+}
+
+/*Mobile*/
+@media (min-width: 425px) {
+
+/*Menu*/
+
+/*Titulo*/
+
+/*Sección sobre mi*/
+
+/*Skills*/
+
+/*Hobbies*/
+ 
+/*Formación Académica*/
+
+/*Experiencia Profesional*/
+
+ /*Contacto*/
+
+/*Footer*/
+
+}
